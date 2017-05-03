@@ -12,21 +12,21 @@ table = dynamodb.create_table(
     TableName='flight_events',
     KeySchema=[
         {
-            'AttributeName': 'flight',
+            'AttributeName': 'day',
             'KeyType': 'HASH'
         },
         {
-            'AttributeName': 'day',
+            'AttributeName': 'flight',
             'KeyType': 'RANGE'
         }
     ],
     AttributeDefinitions=[
         {
-            'AttributeName': 'flight',
+            'AttributeName': 'day',
             'AttributeType': 'S'
         },
         {
-            'AttributeName': 'day',
+            'AttributeName': 'flight',
             'AttributeType': 'S'
         },
 
